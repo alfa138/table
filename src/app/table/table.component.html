@@ -1,0 +1,27 @@
+<p class="pt-3 mb-3">table works!</p>
+
+<table class="table table-striped">
+
+  <thead>
+  <tr>
+    <th (click)="onSort('name')">Name</th>
+    <th (click)="onSort('age')">Age</th>
+    <th (click)="onSort('country')">Country</th>
+    <th (click)="onSort('type')">Type</th>
+  </tr>
+  </thead>
+
+  <tbody>
+
+  <tr *ngFor="let row of tableData">
+
+    <td>{{row.name}}</td>
+    <td>{{row.age}}</td>
+    <td>{{row.country}}</td>
+    <td>{{getType(row)}}</td>
+
+  </tr>
+
+  </tbody>
+
+</table>
